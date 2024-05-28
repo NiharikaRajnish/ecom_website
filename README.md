@@ -1,6 +1,3 @@
-Sure! Below is a basic README file template for an e-commerce website application that uses MongoDB, Express, React, and Node.js:
-
----
 
 # E-Commerce Website Application
 
