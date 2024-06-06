@@ -5,6 +5,7 @@ import Slider from '../components/Slider'
 import Products from '../components/Products'
 import Categories from '../components/Categories'
 import Footer from '../components/Footer'
+import { Provider } from 'react-redux'
 
 
 const Home = () => {

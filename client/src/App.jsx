@@ -9,17 +9,19 @@ import { useEffect, useState } from "react";
 import Cart from "./pages/Cart";
 import * as ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
+import { Provider, useSelector } from "react-redux";
+import store from "./redux/store";
 
 
 const App = () => {
-  const user = true;
+  const user = store.getState().user.currentUser;
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (product) => {
     setCartItems([...cartItems, product]);
   };
-
   return (
+    <Provider store={store}>
     <Router>
       <Routes>
         <Route path="/" element={<Home />}>
@@ -38,8 +40,6 @@ const App = () => {
         <Route path="/checkout" element={<Checkout/>}>
         </Route>
 
-
-
         <Route path="/login" element={<Login/>}>
         </Route>
 
@@ -54,14 +54,16 @@ const App = () => {
           </>
         ) : (
           <>
-            <Route path="/login" element={<Login setUser={setUser} />} />
-            <Route path="/register" element={<Register setUser={setUser} />} />
+           
+            <Route path="/login" element={<Login  />} />
+            <Route path="/register" element={<Register/>} />
           </>
         )} */}
 
 
       </Routes>
     </Router>
+    </Provider>
 
   );
 };
