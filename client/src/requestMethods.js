@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000/api/";
+const BASE_URL = "https://ecom-website-api.onrender.com/api/";
 const TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlMGZhZWIwMTk0ZTQ0YWJkODE0OCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcxNjU4NTg4NiwiZXhwIjoxNzE2ODQ1MDg2fQ.rNNbEZDHju70XK_kKTndS-GaHhfmYkBFRWq6w0S0OCc"
 //   JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser
 //     .accessToken || "";
